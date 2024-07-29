@@ -2,7 +2,10 @@
     materialized='incremental',
     unique_key= ['walletprofileid', 'profile_type'],
     depends_on=['profiles_stg'],
-    on_schema_change='append_new_columns'
+    on_schema_change='append_new_columns',
+    pre_hook=[
+        "{% if target.schema == 'dbt-dimensions' and source('dbt-dimensions', 'profiles_stg_exp') is not none %}TRUNCATE TABLE {{ source('dbt-dimensions', 'profiles_stg_exp') }};{% endif %}"
+    ]
 )}}
 
 {% set table_exists_query = "SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema = 'dbt-dimensions' AND table_name = 'profiles_dimension')" %}
