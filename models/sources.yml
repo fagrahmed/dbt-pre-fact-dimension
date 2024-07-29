@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+
+  - name: axis_core
+    database: dbt
+    tables: 
+      - name: walletprofiles
+
+  - name: axis_kyc
+    database: dbt
+    tables:
+      - name: partner
+
+  - name: dbt-dimensions
+    tables:
+      - name: profiles_dimension
+      - name: profiles_stg
+      - name: profiles_stg_new
+      - name: profiles_stg_update
+      - name: profiles_stg_exp
+      

@@ -1,0 +1,236 @@
+models:
+  - name: profiles_stg
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: id
+        data_type: text
+        constraints:
+          - type: not_null
+          - type: primary_key
+      - name: currentflag
+        data_type: BOOLEAN
+      - name: expdate
+        data_type: TIMESTAMPTZ
+      - name: hash_column
+        data_type: TEXT
+      - name: loaddate
+        data_type: TIMESTAMP
+      - name: operation
+        data_type: TEXT
+      - name: partner_createdat_local
+        data_type: TIMESTAMP
+      - name: partner_deletedat_local
+        data_type: TIMESTAMP
+      - name: partner_isactive
+        data_type: BOOLEAN
+      - name: partner_modifiedat_local
+        data_type: TIMESTAMP
+      - name: partner_name_ar
+        data_type: TEXT
+      - name: partner_name_en
+        data_type: TEXT
+      - name: partnerid
+        data_type: TEXT
+      - name: profile_createdat_local
+        data_type: TIMESTAMP
+      - name: profile_deletedat_local
+        data_type: TIMESTAMP
+      - name: profile_modifiedat_local
+        data_type: TIMESTAMP
+      - name: utc
+        data_type: int
+      - name: profile_type
+        data_type: TEXT
+      - name: walletprofileid
+        data_type: TEXT
+    
+  - name: profiles_stg_new
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: id
+        data_type: text
+        constraints:
+          - type: not_null
+          - type: primary_key
+      - name: currentflag
+        data_type: BOOLEAN
+      - name: expdate
+        data_type: TIMESTAMPTZ
+      - name: hash_column
+        data_type: TEXT
+      - name: loaddate
+        data_type: TIMESTAMP
+      - name: operation
+        data_type: TEXT
+      - name: partner_createdat_local
+        data_type: TIMESTAMP
+      - name: partner_deletedat_local
+        data_type: TIMESTAMP
+      - name: partner_isactive
+        data_type: BOOLEAN
+      - name: partner_modifiedat_local
+        data_type: TIMESTAMP
+      - name: partner_name_ar
+        data_type: TEXT
+      - name: partner_name_en
+        data_type: TEXT
+      - name: partnerid
+        data_type: TEXT
+      - name: profile_createdat_local
+        data_type: TIMESTAMP
+      - name: profile_deletedat_local
+        data_type: TIMESTAMP
+      - name: profile_modifiedat_local
+        data_type: TIMESTAMP
+      - name: utc
+        data_type: int
+      - name: profile_type
+        data_type: TEXT
+      - name: walletprofileid
+        data_type: TEXT
+
+  - name: profiles_stg_update
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: id
+        data_type: text
+        constraints:
+          - type: not_null
+          - type: primary_key
+      - name: currentflag
+        data_type: BOOLEAN
+      - name: expdate
+        data_type: TIMESTAMPTZ
+      - name: hash_column
+        data_type: TEXT
+      - name: loaddate
+        data_type: TIMESTAMP
+      - name: operation
+        data_type: TEXT
+      - name: partner_createdat_local
+        data_type: TIMESTAMP
+      - name: partner_deletedat_local
+        data_type: TIMESTAMP
+      - name: partner_isactive
+        data_type: BOOLEAN
+      - name: partner_modifiedat_local
+        data_type: TIMESTAMP
+      - name: partner_name_ar
+        data_type: TEXT
+      - name: partner_name_en
+        data_type: TEXT
+      - name: partnerid
+        data_type: TEXT
+      - name: profile_createdat_local
+        data_type: TIMESTAMP
+      - name: profile_deletedat_local
+        data_type: TIMESTAMP
+      - name: profile_modifiedat_local
+        data_type: TIMESTAMP
+      - name: utc
+        data_type: int
+      - name: profile_type
+        data_type: TEXT
+      - name: walletprofileid
+        data_type: TEXT
+
+  - name: profiles_stg_exp
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: id
+        data_type: text
+        constraints:
+          - type: not_null
+          - type: primary_key
+      - name: currentflag
+        data_type: BOOLEAN
+      - name: expdate
+        data_type: TIMESTAMPTZ
+      - name: hash_column
+        data_type: TEXT
+      - name: loaddate
+        data_type: TIMESTAMP
+      - name: operation
+        data_type: TEXT
+      - name: partner_createdat_local
+        data_type: TIMESTAMP
+      - name: partner_deletedat_local
+        data_type: TIMESTAMP
+      - name: partner_isactive
+        data_type: BOOLEAN
+      - name: partner_modifiedat_local
+        data_type: TIMESTAMP
+      - name: partner_name_ar
+        data_type: TEXT
+      - name: partner_name_en
+        data_type: TEXT
+      - name: partnerid
+        data_type: TEXT
+      - name: profile_createdat_local
+        data_type: TIMESTAMP
+      - name: profile_deletedat_local
+        data_type: TIMESTAMP
+      - name: profile_modifiedat_local
+        data_type: TIMESTAMP
+      - name: utc
+        data_type: int
+      - name: profile_type
+        data_type: TEXT
+      - name: walletprofileid
+        data_type: TEXT
+
+  - name: profiles_dimension
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: id
+        data_type: text
+        constraints:
+          - type: not_null
+          - type: primary_key
+      - name: currentflag
+        data_type: BOOLEAN
+      - name: expdate
+        data_type: TIMESTAMPTZ
+      - name: hash_column
+        data_type: TEXT
+      - name: loaddate
+        data_type: TIMESTAMP
+      - name: operation
+        data_type: TEXT
+      - name: partner_createdat_local
+        data_type: TIMESTAMP
+      - name: partner_deletedat_local
+        data_type: TIMESTAMP
+      - name: partner_isactive
+        data_type: BOOLEAN
+      - name: partner_modifiedat_local
+        data_type: TIMESTAMP
+      - name: partner_name_ar
+        data_type: TEXT
+      - name: partner_name_en
+        data_type: TEXT
+      - name: partnerid
+        data_type: TEXT
+      - name: profile_createdat_local
+        data_type: TIMESTAMP
+      - name: profile_deletedat_local
+        data_type: TIMESTAMP
+      - name: profile_modifiedat_local
+        data_type: TIMESTAMP
+      - name: utc
+        data_type: int
+      - name: profile_type
+        data_type: TEXT
+      - name: walletprofileid
+        data_type: TEXT
+      
