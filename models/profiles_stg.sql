@@ -31,8 +31,8 @@ SELECT
         COALESCE(wp.vouchers::text, '') || '::' || COALESCE(p.activeflag::text, '') || '::' || COALESCE(p.partnernameen, '') || '::' || 
         COALESCE(p.partnernamear, '') || '::' || COALESCE(courierpartnerid, '') 
     ) AS hash_column,
-    (wp.createdat_aibyte_transform::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') as profile_createdat_local,
-    (wp.updatedat_aibyte_transform::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') as profile_modifiedat_local,
+    (wp.createdat::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') as profile_createdat_local,
+    (wp.updatedat::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') as profile_modifiedat_local,
     (wp.deletedat::timestamptz AT TIME ZONE 'UTC' + INTERVAL '3 hours') as profile_deletedat_local,
 
     wp.type as profile_type,
