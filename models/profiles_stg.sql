@@ -19,7 +19,7 @@
 
 
 SELECT
-    md5(random()::text || '-' || COALESCE(wp.walletprofileid, '') || '-' || COALESCE(wp.updatedat_aibyte_transform::text, '') || '-' || COALESCE(p.lastmodifiedat::text, '') || '-' || now()::text) AS id,
+    md5(random()::text || '-' || COALESCE(wp.walletprofileid, '') || '-' || COALESCE(wp.updatedat::text, '') || '-' || COALESCE(p.lastmodifiedat::text, '') || '-' || now()::text) AS id,
     'insert' AS operation,
     true AS currentflag,
     null::timestamptz AS expdate,
